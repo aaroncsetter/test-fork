@@ -28,5 +28,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
           NPM_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
-        run: |
-          echo "$(semantic-release --debug | grep -oP 'currentTag \K.*? ')"
+        run: echo "$(semantic-release --debug | grep -oP 'currentTag \K.*? ')"
